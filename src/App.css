@@ -1,28 +1,102 @@
-.App {
+.header{
+  position: relative;
+  background: url(./images/header.jpg) center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
   text-align: center;
+  padding: 17px 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.header nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+  padding: 1.5em 0;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.header nav ul{
+  display: inline-block;
+  line-height: 0px;
+  position: relative;
+  height: 21px;
+  border-left: 1px solid rgba(192,192,192,0.35);
+  border-right: 1px solid rgba(192,192,192,.35);
 }
 
-.App-title {
-  font-size: 1.5em;
+.header nav ul li{
+  display: inline-block;
+  margin: -9px 0.5em 0 0.5em;
+  border-radius: .5em;
+  padding: .85em;
+  border: solid 1px transparent;
+}
+.header nav ul li a{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+.header nav >ul:after,
+.header nav >ul:before{
+  display: block;
+  content: '';
+  width: 300%;
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+  height: 5px;
+  border-top: 1px solid rgba(192,192,192,.35);
+  border-bottom: 1px solid rgba(192,192,192,.35);
+}
+.header nav >ul:after{
+  left: 100%;
+  margin-left: 1px;
+}
+.header nav >ul:before{
+  left: 0;
+  transform: translateX(-100%);
+  margin-left: -2px;
 }
 
-.App-intro {
-  font-size: large;
+.header .inner{
+  padding-left: 2em;
+  padding-right: 2em;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.header .inner header{
+  width: 315px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.header .inner h1 a{
+  font-size: 75px;
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  font-weight: inherit;
+}
+.header .inner hr{
+  border: none;
+  display: block;
+  height: 4px;
+  border-top: 1px solid rgba(192,192,192,.35);
+  border-bottom: 1px solid rgba(192,192,192,.35);
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.header .inner footer >a{
+  display: inline-block;
+  height: 112px;
+  line-height: 112px;
+  width: 112px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #df7366;
+  color: #fff;
+  cursor: pointer;
 }
